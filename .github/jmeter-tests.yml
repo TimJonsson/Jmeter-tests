@@ -4,7 +4,7 @@ on:
     branches:
       - jmeter-github-actions
 jobs:
-    name: hello
+  - name: hello
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
