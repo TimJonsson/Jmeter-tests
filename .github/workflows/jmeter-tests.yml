@@ -4,16 +4,17 @@ on:
     branches:
       - jmeter-github-actions
 jobs:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Run JMeter Tests
-        uses: QAInsights/PerfAction@v3.1
-        with:
-          test-plan-path: jmeter/airportGapTests.jmx
-          args: ''
-      - name: Upload Results
-        uses: actions/upload-artifact@v2
-        with:
-          name: jmeter-results
-          path: test-results.jtl
+  Run-tests:
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v3
+    - name: Run JMeter Tests
+      uses: QAInsights/PerfAction@v3.1
+      with:
+        test-plan-path: jmeter/airportGapTests.jmx
+        args: ''
+    - name: Upload Results
+      uses: actions/upload-artifact@v2
+      with:
+        name: jmeter-results
+        path: test-results.jtl
