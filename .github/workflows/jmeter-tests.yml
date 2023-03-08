@@ -13,6 +13,8 @@ jobs:
         with:
           test-plan-path: jmeter/airportGapTests.jmx
           args: ''
+      - name: "Create jtl file"
+        run: touch test-results.jtl
       - name: Upload Results
         uses: actions/upload-artifact@v2
         with:
