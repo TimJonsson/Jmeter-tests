@@ -9,12 +9,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run JMeter Tests
-        uses: QAInsights/PerfAction@v3.1
+        uses: TimJonsson/PerfAction@v1.1.0
         with:
           test-plan-path: jmeter/airportGapTests.jmx
           args: ''
+          results-file: results.csv
       - name: Upload Results
         uses: actions/upload-artifact@v2
         with:
           name: jmeter-results
-          path: result.jtl
+          path: results.csv
