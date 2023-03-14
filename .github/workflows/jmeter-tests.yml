@@ -2,7 +2,7 @@ name: Running Jmeter tests
 on:
   push:
     branches:
-      - jmeter-github-actions
+      - results-as-csv
 jobs:
   Run-tests:
     runs-on: ubuntu-latest
