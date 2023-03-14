@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run JMeter Tests
-        uses: TimJonsson/PerfAction@v1.1.0
+        uses: https://github.com/TimJonsson/PerfAction@v1.1.0
         with:
           test-plan-path: jmeter/airportGapTests.jmx
           args: ''
